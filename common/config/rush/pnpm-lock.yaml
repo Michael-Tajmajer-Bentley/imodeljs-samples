@@ -6,6 +6,7 @@ dependencies:
   '@bentley/express-server': 1.8.0
   '@bentley/geometry-core': 1.8.0_@bentley+bentleyjs-core@1.8.0
   '@bentley/icons-generic-webfont': 0.0.22
+  '@bentley/imodel-changeset-test-utility': 0.0.56
   '@bentley/imodeljs-backend': 1.8.0_75955ef2dab45bb1afc9ebd25a0f1c30
   '@bentley/imodeljs-clients': 1.8.0_600c2e274804d25a4ce14144196172c6
   '@bentley/imodeljs-clients-backend': 1.8.0_e90a07b7ccaaef8cf108248b086a8469
@@ -229,6 +230,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-cz5Ji23KCi4T+YIE/BolWosrJuSmoZeN1EFnRtBwF+KKLi8GG/Z2c2hOJJeCXPk4mwk4QFvTmwIodJowXgttRA==
+  /@bentley/bentleyjs-core/1.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-PCqzgQiptebpCYTK0BKuBmOoPFjFWqd2ACnTGsFQvfzHOtAR1zTsITa1OvGs5hEAO0hHc/JfCsfyVzFyZ6Ryag==
   /@bentley/bentleyjs-core/1.8.0:
     dev: false
     resolution:
@@ -295,6 +300,14 @@ packages:
       node: '>=10.11.0 <13.0'
     resolution:
       integrity: sha512-KipD3O3DBQ33nM1juljTC/ZCfVG89+BOTw4q3aO032mNgm34Va2L0dplzz24h8NSi1qO+VWCv1yCw45NCKeRUg==
+  /@bentley/geometry-core/1.2.0_@bentley+bentleyjs-core@1.2.0:
+    dependencies:
+      '@bentley/bentleyjs-core': 1.2.0
+    dev: false
+    peerDependencies:
+      '@bentley/bentleyjs-core': ^1.2.0
+    resolution:
+      integrity: sha512-lB3GNiWun2qijA94dJM5Ac4LgbX5XuK92n3/CJSsVZw55OZGpHFplk0fhAyucHiFQUpQWUYn3ea62sV23gQYhA==
   /@bentley/geometry-core/1.8.0_@bentley+bentleyjs-core@1.8.0:
     dependencies:
       '@bentley/bentleyjs-core': 1.8.0
@@ -315,6 +328,46 @@ packages:
     dev: false
     resolution:
       integrity: sha512-2Q9T6itdjHJi9ZbyUIkb/1gzpnbhSL5WZdWtk+JCxrKg/np4MQyMc9DQvrgZWSPmoKDf4wtl6O1YaOfgdG8oNg==
+  /@bentley/imodel-changeset-test-utility/0.0.56:
+    dependencies:
+      '@bentley/bentleyjs-core': 1.2.0
+      '@bentley/geometry-core': 1.2.0_@bentley+bentleyjs-core@1.2.0
+      '@bentley/imodeljs-backend': 1.2.0_080677172a91b790a000db749a3ad364
+      '@bentley/imodeljs-clients': 1.2.0_cfe9d0c4a5b3235bb82ac99e0f8c0e0a
+      '@bentley/imodeljs-clients-backend': 1.2.0_29b8fae46de9233b61527e024ee13eea
+      '@bentley/imodeljs-common': 1.2.0_29b8fae46de9233b61527e024ee13eea
+      minimist: 1.2.0
+      path: 0.12.7
+    dev: false
+    resolution:
+      integrity: sha512-xJj7a9MnMj134ADS0ZJWOd++TSRUWEW7q6flh7GGSEQ/f5uWhLrrWhQLryXFjG2Vp0zPV64/MGNi1NwsXppcYw==
+  /@bentley/imodeljs-backend/1.2.0_080677172a91b790a000db749a3ad364:
+    dependencies:
+      '@bentley/bentleyjs-core': 1.2.0
+      '@bentley/geometry-core': 1.2.0_@bentley+bentleyjs-core@1.2.0
+      '@bentley/imodeljs-clients': 1.2.0_cfe9d0c4a5b3235bb82ac99e0f8c0e0a
+      '@bentley/imodeljs-clients-backend': 1.2.0_29b8fae46de9233b61527e024ee13eea
+      '@bentley/imodeljs-common': 1.2.0_29b8fae46de9233b61527e024ee13eea
+      '@bentley/imodeljs-native': 0.142.0
+      azure-storage: 2.10.3
+      form-data: 2.5.1
+      fs-extra: 6.0.1
+      glob: 7.1.6
+      js-base64: 2.5.1
+      multiparty: 4.2.1
+      object-hash: 1.3.1
+      semver: 5.7.1
+    dev: false
+    engines:
+      node: '>=10.11.0 <11.0'
+    peerDependencies:
+      '@bentley/bentleyjs-core': ^1.2.0
+      '@bentley/geometry-core': ^1.2.0
+      '@bentley/imodeljs-clients': ^1.2.0
+      '@bentley/imodeljs-clients-backend': ^1.2.0
+      '@bentley/imodeljs-common': ^1.2.0
+    resolution:
+      integrity: sha512-u6fHLf0ZBIh+a0vt9MhHUrD7cFUyHMsRGU/pP8Oux33XC2SlNFJZPCywa9YZuan5xArDq7YYMbUwcgV154+8hA==
   /@bentley/imodeljs-backend/1.8.0_75955ef2dab45bb1afc9ebd25a0f1c30:
     dependencies:
       '@azure/storage-blob': 10.5.0
@@ -341,6 +394,29 @@ packages:
       '@bentley/imodeljs-common': ^1.8.0
     resolution:
       integrity: sha512-Y+POX7E+a7WMPizilT+kjnUqp2ygVxyQBZ5X+WkXCjBD5AvAj+EETlrPpa46FltCvMZagGK/2fPxCx5DHh/wcQ==
+  /@bentley/imodeljs-clients-backend/1.2.0_29b8fae46de9233b61527e024ee13eea:
+    dependencies:
+      '@bentley/bentleyjs-core': 1.2.0
+      '@bentley/geometry-core': 1.2.0_@bentley+bentleyjs-core@1.2.0
+      '@bentley/imodeljs-clients': 1.2.0_cfe9d0c4a5b3235bb82ac99e0f8c0e0a
+      '@openid/appauth': 1.2.6
+      deep-assign: 2.0.0
+      fs-extra: 6.0.1
+      fs-write-stream-atomic: 1.0.10
+      https-proxy-agent: 2.2.4
+      js-base64: 2.5.1
+      jsonwebtoken: 8.5.1
+      openid-client: 2.5.0
+      semver: 5.7.1
+    dev: false
+    engines:
+      node: '>=10.11.0 <11.0'
+    peerDependencies:
+      '@bentley/bentleyjs-core': ^1.2.0
+      '@bentley/geometry-core': ^1.2.0
+      '@bentley/imodeljs-clients': ^1.2.0
+    resolution:
+      integrity: sha512-RO15zF9X+nJlxWm0mkdGeZ4NyiyUhWCgfTZp64WRQXWmXJcVFbHt91c3cMGNMUtuzmiSE0We8gyfxoFe7WNEBw==
   /@bentley/imodeljs-clients-backend/1.8.0_e90a07b7ccaaef8cf108248b086a8469:
     dependencies:
       '@bentley/bentleyjs-core': 1.8.0
@@ -366,6 +442,25 @@ packages:
       '@bentley/imodeljs-common': ^1.8.0
     resolution:
       integrity: sha512-D3WT63EYIF6w4hWXWX5/RfWxA+4Q8IVrZDhWQk9zkdjd4NmDZq5C5U/bRS8kck52YRGqW/+IGkopBTo7ZspCUg==
+  /@bentley/imodeljs-clients/1.2.0_cfe9d0c4a5b3235bb82ac99e0f8c0e0a:
+    dependencies:
+      '@bentley/bentleyjs-core': 1.2.0
+      '@bentley/geometry-core': 1.2.0_@bentley+bentleyjs-core@1.2.0
+      deep-assign: 2.0.0
+      js-base64: 2.5.1
+      oidc-client: 1.7.1
+      qs: 6.9.1
+      superagent: 3.8.3
+      xmldom: 0.1.27
+      xpath: 0.0.27
+    dev: false
+    engines:
+      node: '>=10.11.0 <11.0'
+    peerDependencies:
+      '@bentley/bentleyjs-core': ^1.2.0
+      '@bentley/geometry-core': ^1.2.0
+    resolution:
+      integrity: sha512-o2LP2LUfy0mqcNWpp/0SLreKGIzQyyIB4hS6KLOplt2RYRpwK9OsXC0K/o2YSc2ptCLbmeMt68SU2IO9TB6B9g==
   /@bentley/imodeljs-clients/1.8.0_600c2e274804d25a4ce14144196172c6:
     dependencies:
       '@bentley/bentleyjs-core': 1.8.0
@@ -383,6 +478,22 @@ packages:
       '@bentley/geometry-core': ^1.8.0
     resolution:
       integrity: sha512-fsuQRgEJjEeGx92sFAhja/Dkd0dAG0UdI+6tndW0wJmRSMgbz1yj5o4fNNU5KpxaEiPD4g2hUiJKO7L0LmBGGA==
+  /@bentley/imodeljs-common/1.2.0_29b8fae46de9233b61527e024ee13eea:
+    dependencies:
+      '@bentley/bentleyjs-core': 1.2.0
+      '@bentley/geometry-core': 1.2.0_@bentley+bentleyjs-core@1.2.0
+      '@bentley/imodeljs-clients': 1.2.0_cfe9d0c4a5b3235bb82ac99e0f8c0e0a
+      semver: 5.7.1
+      url-search-params: 1.1.0
+    dev: false
+    engines:
+      node: '>=10.11.0 <11.0'
+    peerDependencies:
+      '@bentley/bentleyjs-core': ^1.2.0
+      '@bentley/geometry-core': ^1.2.0
+      '@bentley/imodeljs-clients': ^1.2.0
+    resolution:
+      integrity: sha512-XY28/o3XOhr2mEhvzh4cQTy5FdSUa9/ioMoeTFn5YYLTHyA3p3DkTcw0U3Dpz8Mzk8/F9W/yOJCnBA2l90tOlQ==
   /@bentley/imodeljs-common/1.8.0_e1287c7df2fb82d757d05bf9a1a97042:
     dependencies:
       '@bentley/bentleyjs-core': 1.8.0
@@ -432,6 +543,11 @@ packages:
       '@bentley/bentleyjs-core': ^1.8.0
     resolution:
       integrity: sha512-995jaW0hkrY/YO0rVbxOf+iKhxniwnXJ1tUPNvKXj+k99qQsdqRkt40CLFy73EsX6ySQu26dx84mneuM0fA9Fg==
+  /@bentley/imodeljs-native/0.142.0:
+    dev: false
+    requiresBuild: true
+    resolution:
+      integrity: sha512-y/6uWlT2G2pcAfhygyr+JvmaZyhkFtNWcE/0eUxxBVocV9aYeyT3wEVz+Z4GD/9qcI7ERq6xz++stjupPE3jAQ==
   /@bentley/imodeljs-native/1.8.5:
     dev: false
     requiresBuild: true
@@ -2000,6 +2116,24 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1uvKqKQta3KBxIz14F2v06AEHZ/dIoeKfbTRkK1E5oqjDnuEerLmYTgJB5AiQZHJcljpg1TuRzdjDR06qNk0DQ==
+  /azure-storage/2.10.3:
+    dependencies:
+      browserify-mime: 1.2.9
+      extend: 3.0.2
+      json-edm-parser: 0.1.2
+      md5.js: 1.3.4
+      readable-stream: 2.0.6
+      request: 2.88.0
+      underscore: 1.8.3
+      uuid: 3.3.3
+      validator: 9.4.1
+      xml2js: 0.2.8
+      xmlbuilder: 9.0.7
+    dev: false
+    engines:
+      node: '>= 0.8.26'
+    resolution:
+      integrity: sha512-IGLs5Xj6kO8Ii90KerQrrwuJKexLgSwYC4oLWmc11mzKe7Jt2E5IVg+ZQ8K53YWZACtVTMBNO3iGuA+4ipjJxQ==
   /babel-code-frame/6.26.0:
     dependencies:
       chalk: 1.1.3
@@ -2369,6 +2503,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-BioO1xf3hFwz4kc6iBhI3ieDFompMhrMlnDFC4/0/vd5MokpuAc3R+LYbwTA9A5Yc9pq9UYPqffKpW2ObuwX5A==
+  /browserify-mime/1.2.9:
+    dev: false
+    resolution:
+      integrity: sha1-rrGvKN5sDXpqLOQK22j/GEIq8x8=
   /browserify-rsa/4.0.1:
     dependencies:
       bn.js: 4.11.8
@@ -7292,6 +7430,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Wx85evx11ne96Lz8Dkfh+aPZqJg=
+  /json-edm-parser/0.1.2:
+    dependencies:
+      jsonparse: 1.2.0
+    dev: false
+    resolution:
+      integrity: sha1-HmCw/vG8CvZ7wNFG393lSGzWFbQ=
   /json-parse-better-errors/1.0.2:
     dev: false
     resolution:
@@ -7373,6 +7517,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
+  /jsonparse/1.2.0:
+    dev: false
+    engines:
+      '0': node >= 0.2.0
+    resolution:
+      integrity: sha1-XAxWhRBxYOcv50ib3eoLRMK8Z70=
   /jsonwebtoken/8.5.1:
     dependencies:
       jws: 3.2.2
@@ -7832,6 +7982,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-rUxjysqif/BZQH2yhd5Aaq7vXMSx9NdEsQcyA07uEzIvxgI7zIr33gGsh+RU0/XjmQpCW7RsVof1vlkvQVCK5A==
+  /md5.js/1.3.4:
+    dependencies:
+      hash-base: 3.0.4
+      inherits: 2.0.4
+    dev: false
+    resolution:
+      integrity: sha1-6b296UogpawYsENA/Fdk1bCdkB0=
   /md5.js/1.3.5:
     dependencies:
       hash-base: 3.0.4
@@ -8903,6 +9060,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
+  /oidc-client/1.7.1:
+    dev: false
+    resolution:
+      integrity: sha512-qsPBQVa/BY6AmdY89erANJbfDXrX1dqu9lKgvYZzkVDzIj5mmw6wGjFeQuV2HDm4TiJA0VT5HSTWOWnXZUYu0g==
   /oidc-client/1.9.1:
     dependencies:
       base64-js: 1.3.1
@@ -10086,6 +10247,10 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-00ZMZUiHaJrNfk33guavqgvfJS30sLYf0f8+Srklv0AMPodGGHcoHgksZ3OThYnIvOd+8yMCn0YiEOogjlgsnA==
+  /process-nextick-args/1.0.7:
+    dev: false
+    resolution:
+      integrity: sha1-FQ4gt1ZZCtP5EJPyWk8q2L/zC6M=
   /process-nextick-args/2.0.1:
     dev: false
     resolution:
@@ -10767,6 +10932,17 @@ packages:
     dev: false
     resolution:
       integrity: sha1-fPTFTvZI44EwhMY23SB54WbAgdk=
+  /readable-stream/2.0.6:
+    dependencies:
+      core-util-is: 1.0.2
+      inherits: 2.0.4
+      isarray: 1.0.0
+      process-nextick-args: 1.0.7
+      string_decoder: 0.10.31
+      util-deprecate: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha1-j5A0HmilPMySh4jaz80Rs265t44=
   /readable-stream/2.3.6:
     dependencies:
       core-util-is: 1.0.2
@@ -11267,6 +11443,10 @@ packages:
       webpack: ^3.0.0 || ^4.0.0
     resolution:
       integrity: sha512-tuU7+zm0pTCynKYHpdqaPpe+MMTQ76I9TPZ7i4/5dZsigE350shQWe5EZNl5dBidM49TPET75tNqRbcsUZWeNA==
+  /sax/0.5.8:
+    dev: false
+    resolution:
+      integrity: sha1-1HLbIo6zMcJQaw6MFVJK25OdEsE=
   /sax/1.2.4:
     dev: false
     resolution:
@@ -13208,6 +13388,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Il9rngM3Zj4Njnz9aG/Cg2zKznY=
+  /underscore/1.8.3:
+    dev: false
+    resolution:
+      integrity: sha1-Tz+1OxBuYJf8+ctBCfKl6b36UCI=
   /unidecode/0.1.8:
     dev: false
     engines:
@@ -13361,6 +13545,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
+  /url-search-params/1.1.0:
+    deprecated: now available as @ungap/url-search-params
+    dev: false
+    resolution:
+      integrity: sha512-XiO5GLAxmlZgdLob/RmKZRc2INHrssMbpwD6O46JkB1aEJO4fkV3x3mR6+CDX01ijfEUwvfwCiUQZrKqfm1ILw==
   /url-slug/2.0.0:
     dependencies:
       unidecode: 0.1.8
@@ -13447,6 +13636,12 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-Yw5wW34fSv5spzTXNkokD6S6/Oq92d8q/t14TqsS3fAiA1RYnxSFSIZ+CY3n6PGGRCq5HhJTSepQvFUS2QUDxA==
+  /validator/9.4.1:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-YV5KjzvRmSyJ1ee/Dm5UED0G+1L4GZnLN3w6/T+zZm8scVua4sOhYKWTUrKa0H/tMiJyO9QLHMPN+9mB/aMunA==
   /vary/1.1.2:
     dev: false
     engines:
@@ -13928,6 +14123,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
+  /xml2js/0.2.8:
+    dependencies:
+      sax: 0.5.8
+    dev: false
+    resolution:
+      integrity: sha1-m4FpCTFjH/CdGVdUn69U9PmAs8I=
   /xml2js/0.4.22:
     dependencies:
       sax: 1.2.4
@@ -13944,6 +14145,12 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==
+  /xmlbuilder/9.0.7:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=
   /xmlchars/2.2.0:
     dev: false
     resolution:
@@ -14433,6 +14640,7 @@ packages:
       '@bentley/bentleyjs-core': 1.8.0
       '@bentley/build-tools': 1.8.0
       '@bentley/geometry-core': 1.8.0_@bentley+bentleyjs-core@1.8.0
+      '@bentley/imodel-changeset-test-utility': 0.0.56
       '@bentley/imodeljs-backend': 1.8.0_75955ef2dab45bb1afc9ebd25a0f1c30
       '@bentley/imodeljs-clients': 1.8.0_600c2e274804d25a4ce14144196172c6
       '@bentley/imodeljs-clients-backend': 1.8.0_e90a07b7ccaaef8cf108248b086a8469
@@ -14461,7 +14669,7 @@ packages:
     dev: false
     name: '@rush-temp/imodel-query-agent'
     resolution:
-      integrity: sha512-noL5nvmKiwYpJN495zqj4hboHT8Zx2lkjzyX60Ti/i3VxfOIlHRx9H+GTsBas/sQDjBSxsa0x7Avj9JC5Fmhug==
+      integrity: sha512-NVeXFhErPcnNCroKrxtTJhD6NPQbXF0Gn3dG0iijXJYZYfiH6I0hg14K2f9aTPOw5iJdn3lA2QMwfb8tlhpi0w==
       tarball: 'file:projects/imodel-query-agent.tgz'
     version: 0.0.0
   'file:projects/ninezone-sample-app.tgz':
@@ -14740,6 +14948,7 @@ packages:
       integrity: sha512-VTzAQJmaLrVecq59beWfzspIvya1dP8ItDSb49b2kGAna+vC6C710xEz68s6kZ4G+HgBYrXnNtZvFNwYIg5hTg==
       tarball: 'file:projects/viewer-only-sample.tgz'
     version: 0.0.0
+registry: ''
 specifiers:
   '@bentley/bentleyjs-core': 1.8.0
   '@bentley/build-tools': 1.8.0
@@ -14748,6 +14957,7 @@ specifiers:
   '@bentley/express-server': 1.8.0
   '@bentley/geometry-core': 1.8.0
   '@bentley/icons-generic-webfont': ^0.0.22
+  '@bentley/imodel-changeset-test-utility': 0.0.56
   '@bentley/imodeljs-backend': 1.8.0
   '@bentley/imodeljs-clients': 1.8.0
   '@bentley/imodeljs-clients-backend': 1.8.0

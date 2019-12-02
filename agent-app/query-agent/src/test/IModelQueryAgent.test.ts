@@ -8,7 +8,7 @@ import { Config } from "@bentley/imodeljs-clients";
 import { QueryAgent } from "../QueryAgent";
 import { QueryAgentWebServer } from "../QueryAgentWebServer";
 import { QueryAgentConfig } from "../QueryAgentConfig";
-import { ChangesetGenerationHarness, TestChangesetSequence } from "imodel-changeset-test-utility";
+import { ChangesetGenerationHarness, TestChangesetSequence } from "@bentley/imodel-changeset-test-utility";
 import { Logger } from "@bentley/bentleyjs-core";
 import { TestMockObjects } from "./TestMockObjects";
 import { main } from "../Main";

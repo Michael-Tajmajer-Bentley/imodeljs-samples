@@ -21,8 +21,8 @@ export class QueryAgentConfig {
       // the developer registration procedure here - https://git.io/fx8YP.
       // Note: These can be set in the environment also - e.g., "set ims_agent_client_id=agent_test_client"
       // -----------------------------------------------------------------------------------------------------------
-      // imjs_agent_client_id: "Set this to client id",
-      // imjs_agent_client_secret: "Set this to the client secret",
+      imjs_agent_client_id: "service-THNhTC9wS0OI9Jy2JieeD5auX",
+      imjs_agent_client_secret: "C2rdPNMHWBCoUoCimuxrT2NuNFnzLX1Sgwe/8psJqOYMK3T80sAGS0XlNmZefwv2kVPqmxyZ7D15GMiMAlJMHg==",
 
       // -----------------------------------------------------------------------------------------------------------
       // Test project and iModel (REQUIRED)
@@ -30,15 +30,15 @@ export class QueryAgentConfig {
       // developer registration procedure here - https://git.io/fx8YP
       // Note: These can be set in the environment also - e.g., "set imjs_agent_project_name=MyProject"
       // -----------------------------------------------------------------------------------------------------------
-      // imjs_agent_project_name: "Set this to the name of the sample project",
-      // imjs_agent_imodel_name: "Set this to the name of the sample iModel",
+      imjs_agent_project_name: "mdt-example-imodel-project",
+      imjs_agent_imodel_name: "mdt-example-imodel-project",
 
       // -----------------------------------------------------------------------------------------------------------
       // Other application settings (NOT REQUIRED)
       // Note: These can be set in the environment also - e.g., "set agent_app_port=3000"
       // -----------------------------------------------------------------------------------------------------------
-      agent_app_port: process.env.AGENT_APP_PORT || 3000,
-      agent_app_listen_time: process.env.AGENT_APP_LISTEN_TIME || 40000,
+      agent_app_port: process.env.AGENT_APP_PORT || 3030,
+      agent_app_listen_time: process.env.AGENT_APP_LISTEN_TIME || 400000,
       imjs_buddi_resolve_url_using_region: process.env.IMJS_BUDDI_RESOLVE_URL_USING_REGION,
       imjs_default_relying_party_uri: "https://connect-wsg20.bentley.com",
     });
