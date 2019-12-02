@@ -26,6 +26,7 @@ export default function initialize(rpcs: RpcInterfaceDefinition[]) {
     ElectronRpcManager.initializeImpl({}, rpcs);
     if (manager.mainWindow) {
       manager.mainWindow.show();
+      manager.mainWindow.webContents.openDevTools();
     }
   })();
 }

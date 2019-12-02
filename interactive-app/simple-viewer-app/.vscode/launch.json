@@ -109,6 +109,22 @@
         "lib/backend/main.js"
       ],
     },
+    // {
+    //   "name": "Electron: Renderer (frontend)",
+    //   "type": "chrome",
+    //   "request": "launch",
+    //   "cwd": "${workspaceFolder}",
+    //   "timeout": 60000,
+    //   "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+    //   "windows": {
+    //     "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+    //   },
+    //   "runtimeArgs": [
+    //     "${workspaceRoot}/lib/backend/main.js",
+    //     "--remote-debugging-port=9222"
+    //   ],
+    //   "webRoot": "${workspaceRoot}"
+    // },
     {
       "name": "E2E Tests only",
       "type": "node",

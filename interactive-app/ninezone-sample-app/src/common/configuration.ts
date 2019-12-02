@@ -33,10 +33,10 @@ export default function setupEnv() {
 
     // Set this to the registered clientId
     // Note: "imodeljs-spa-test-2686" is setup to work with the (default) localhost redirect URI below
-    imjs_browser_test_client_id: "imodeljs-spa-test-2686",
+    imjs_browser_test_client_id: "mdt-example-imodel-project",
 
     // Use this client id when running electron app
-    imjs_electron_test_client_id: "spa-nhNhyPAwoeFnwIhOwvnekjy7W",
+    imjs_electron_test_client_id: "spa-4wcyvFPwsFEBnGHqanVldricG",
 
     // Set this to be the registered redirect URI
     // Note: "http://localhost:3000/signin-callback" is setup to work with the (default) web clientId above
