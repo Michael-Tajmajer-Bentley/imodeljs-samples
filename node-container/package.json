@@ -4,10 +4,10 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "clean": "npx rimraf dist && npx rimraf *.gz",
+    "clean": "npx rimraf dist && npx rimraf *.gz && npx rimraf *.log",
     "start:local": "node src/server.js",
     "start:container": "docker run -p 8080:8080 -d node-web-app",
-    "docker:connect": "echo docker exec -it CONTAINER /bin/bash",
+    "docker:connect": "echo docker exec -it CONTAINER pwsh",
     "docker:log": "echo docker logs -f CONTAINER",
     "build:code:dev": "tsc --build tsdev.json 1>&2",
     "build:code:prod": "tsc --build tsprod.json 1>&2",
