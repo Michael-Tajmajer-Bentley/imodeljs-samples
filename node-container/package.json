@@ -1,0 +1,26 @@
+{
+  "name": "mdt-node-container",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "npx rimraf dist && npx rimraf *.gz",
+    "start:local": "node src/server.js",
+    "start:container": "docker run -p 8080:8080 -d node-web-app",
+    "docker:connect": "echo docker exec -it CONTAINER /bin/bash",
+    "docker:log": "echo docker logs -f CONTAINER",
+    "build:code:dev": "tsc --build tsdev.json 1>&2",
+    "build:code:prod": "tsc --build tsprod.json 1>&2",
+    "build:container": "docker build -t node-web-app .",
+    "build": "npm run build:code:prod && npm run build:container",
+    "export": "docker image save node-web-app -o node-web-app.gz"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.3"
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "extends": "./ts-base.json",
+    "compilerOptions": {
+        "inlineSourceMap": true,
+        "inlineSources": true
+    }
+}
