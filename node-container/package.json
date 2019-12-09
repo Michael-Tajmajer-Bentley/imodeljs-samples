@@ -6,21 +6,49 @@
   "scripts": {
     "clean": "npx rimraf dist && npx rimraf *.gz && npx rimraf *.log",
     "start:local": "node src/server.js",
-    "start:container": "docker run -p 8080:8080 -d node-web-app",
+    "start:container": "docker run -p 8080:8080 -p 3000:3000 -d node-web-app",
     "docker:connect": "echo docker exec -it CONTAINER pwsh",
     "docker:log": "echo docker logs -f CONTAINER",
     "build:code:dev": "tsc --build tsdev.json 1>&2",
     "build:code:prod": "tsc --build tsprod.json 1>&2",
-    "build:container": "docker build -t node-web-app .",
+    "build:container": "docker build --no-cache --force-rm -t node-web-app .",
     "build": "npm run build:code:prod && npm run build:container",
     "export": "docker image save node-web-app -o node-web-app.gz"
   },
   "dependencies": {
-    "express": "^4.16.1"
+    "@bentley/bentleyjs-core": "^1.8.0",
+    "@bentley/geometry-core": "^1.8.0",
+    "@bentley/imodeljs-backend": "^1.8.0",
+    "@bentley/imodeljs-clients-backend": "^1.8.0",
+    "@bentley/imodeljs-clients": "^1.8.0",
+    "@bentley/imodeljs-common": "^1.8.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.1",
+    "minimist": "^1.2.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
+    "@bentley/build-tools": "1.8.0",
+    "@bentley/imodel-changeset-test-utility": "0.0.56",
+    "@types/body-parser": "^1.17.0",
+    "@types/chai": "^4.1.7",
     "@types/express": "^4.17.2",
+    "@types/minimist": "^1.2.0",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.7",
+    "@types/supertest": "^2.0.5",
+    "chai": "^4.2.0",
+    "debug": "^3.1.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^14.0.0",
     "rimraf": "^3.0.0",
+    "supertest": "^4.0.2",
+    "tslint": "^5.16.0",
+    "typemoq": "^2.1.0",
     "typescript": "^3.7.3"
+  },
+  "nyc": {
+    "nycrc-path": "./node_modules/@bentley/build-tools/.nycrc"
   }
 }

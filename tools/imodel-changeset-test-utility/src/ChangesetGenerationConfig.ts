@@ -77,7 +77,7 @@ export class ChangesetGenerationConfig {
     return 20;
   }
   public static get changesetPushDelay(): number {
-    return 2000;
+    return 20000;
   }
 
 }
